@@ -77,8 +77,8 @@ class JAXB
 					}
 
 					$attribute .= "\tprivate \$$attrName;\n";
-					$accessors .= "\tfunction get$attrName(){\n\t\treturn \$this->$attrName;\n\t}\n";
-					$mutators .= "\tfunction set$attrName(\$value){\n\t\treturn \$this->$attrName = \$value;\n\t}\n";
+					$accessors .= "\tpublic function get$attrName(){\n\t\treturn \$this->$attrName;\n\t}\n";
+					$mutators .= "\tpublic function set$attrName(\$value){\n\t\treturn \$this->$attrName = \$value;\n\t}\n";
 
 					$attributeList .= $attribute;
 				}
